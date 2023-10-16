@@ -1,0 +1,5 @@
+---
+- name: "Include labocbz.deploy_influxdb playbook"
+  tags:
+      - "labocbz.deploy_influxdb"
+  ansible.builtin.import_playbook: "../../playbook.yml"
