@@ -18,9 +18,15 @@
 
 An Ansible playbook to deploy and configure Influxdb on your host.
 
+This playbook simplifies the installation of InfluxDB along with its bundled web interface. You can easily configure the database service to bind to a specific network interface, enhancing security. Furthermore, the playbook allows for seamless integration with an Apache2 reverse proxy frontend, offering an optimal configuration for InfluxDB.
+
+With this playbook, you can effortlessly set up and configure InfluxDB, ensuring that it operates securely and efficiently, while providing the option to customize its network interface and integrate it seamlessly with Apache2 for web-based access.
+
 ## Deployment diagramm
 
 ![](./assets/Ansible-Playbook-Labocbz-Deploy-Influxdb.drawio.svg)
+
+This demonstrates a potential deployment carried out using this playbook. We can observe an InfluxDB service component. This service component encompasses a subsystem, housing the two core components of our service: Apache, configured as an SSL-authenticated reverse proxy, and InfluxDB. It's often advantageous to offload security configuration to reverse proxies. In doing so, new authentication methods based on LDAP, Web Application Firewalls (WAF), Quality of Service (QoS), and more can be installed. The playbook effectively manages these scenarios.
 
 ## Tests and simulations
 
@@ -93,6 +99,12 @@ Here you can put your change to keep a trace of your work and decisions.
 ### 2023-10-16: First Init
 
 * First init of this playbook with the bootstrap_playbook playbook by Lord Robin Crombez
+
+### 2023-10-20: Fix and Push
+
+* Playbook deploy Influxdb
+* Apache2 can be installed as reverse proxy SSL / Auth
+* WAF, LDAP, QOS can be handled
 
 ## Authors
 
