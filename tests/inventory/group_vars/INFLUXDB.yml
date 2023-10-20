@@ -1,5 +1,5 @@
 ---
-inv_influxdb_http_bind_address: "0.0.0.0"
+inv_influxdb_http_bind_address: "127.0.0.1"
 inv_influxdb_http_bind_port: 8086
 
 inv_influxdb_ssl: true
@@ -29,4 +29,4 @@ inv_influxdb_cert_bundles:
     #src_password: "secretPassword"
     dest_user: "root"
     dest_group: "root"
-    dest_mode: "0700"
+    dest_mode: "0755"

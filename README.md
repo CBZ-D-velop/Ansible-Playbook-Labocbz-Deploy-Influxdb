@@ -20,6 +20,8 @@ An Ansible playbook to deploy and configure Influxdb on your host.
 
 ## Deployment diagramm
 
+![](./assets/Ansible-Playbook-Labocbz-Deploy-Influxdb.drawio.svg)
+
 ## Tests and simulations
 
 ### Basics
