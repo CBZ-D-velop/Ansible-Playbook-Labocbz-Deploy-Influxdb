@@ -1,16 +1,16 @@
 ---
 inv_install_influxdb: true
 
-inv_influxdb_http_bind_address: "0.0.0.0"
-inv_influxdb_http_bind_port: 8086
+inv_install_influxdb_http_bind_address: "0.0.0.0"
+inv_install_influxdb_http_bind_port: 8086
 
-inv_influxdb_ssl: true
-inv_influxdb_ssl_domain: "my-influxdb-server.domain.tld"
-inv_influxdb_ssl_path: "/etc/influxdb/ssl"
-inv_influxdb_ssl_key: "{{ inv_influxdb_ssl_path }}/{{ inv_influxdb_ssl_domain }}/{{ inv_influxdb_ssl_domain }}.pem.key"
-inv_influxdb_ssl_cert: "{{ inv_influxdb_ssl_path }}/{{ inv_influxdb_ssl_domain }}/{{ inv_influxdb_ssl_domain }}.pem.crt"
+inv_install_influxdb_ssl: true
+inv_install_influxdb_ssl_domain: "my-influxdb-server.domain.tld"
+inv_install_influxdb_ssl_path: "/etc/influxdb/ssl"
+inv_install_influxdb_ssl_key: "{{ inv_install_influxdb_ssl_path }}/{{ inv_install_influxdb_ssl_domain }}/{{ inv_install_influxdb_ssl_domain }}.pem.key"
+inv_install_influxdb_ssl_cert: "{{ inv_install_influxdb_ssl_path }}/{{ inv_install_influxdb_ssl_domain }}/{{ inv_install_influxdb_ssl_domain }}.pem.crt"
 
-inv_influxdb_cert_bundles:
+inv_install_influxdb_cert_bundles:
   - name: "My-Local-Ansible-Root-CA.pem.crt"
     type: "CA"
     src: "/tmp/My-Local-Ansible-Root-CA.pem.crt"
@@ -26,7 +26,7 @@ inv_influxdb_cert_bundles:
   - name: "my-influxdb-server.domain.tld"
     type: "cert"
     src: "/tmp/my-influxdb-server.domain.tld.zip"
-    dest: "{{ inv_influxdb_ssl_path }}"
+    dest: "{{ inv_install_influxdb_ssl_path }}"
     #src_user: "myUser"
     #src_password: "secretPassword"
     dest_user: "root"
