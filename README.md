@@ -114,3 +114,8 @@ Here you can put your change to keep a trace of your work and decisions.
 
 * [Ansible playbook documentation](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_playbooks.html)
 * [Ansible Molecule documentation](https://molecule.readthedocs.io/)
+* [labocbz.install_influxdb](https://github.com/CBZ-D-velop/Ansible-Role-Labocbz-Install-Influxdb.git)
+
+
+/etc/influxdb/ssl/clu-influxdb.net3106.databases.labo-cbz.net/clu-influxdb.net3106.databases.labo-cbz.net.pem.crt
+/etc/influxdb/ssl/clu-influxdb2.net3106.databases.labo-cbz.net/clu-influxdb2.net3106.databases.labo-cbz.net.pem.crt

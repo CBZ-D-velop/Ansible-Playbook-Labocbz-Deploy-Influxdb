@@ -1,5 +1,7 @@
 ---
-inv_influxdb_http_bind_address: "127.0.0.1"
+inv_install_influxdb: true
+
+inv_influxdb_http_bind_address: "0.0.0.0"
 inv_influxdb_http_bind_port: 8086
 
 inv_influxdb_ssl: true
