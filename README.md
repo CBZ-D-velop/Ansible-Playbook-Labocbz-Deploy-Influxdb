@@ -26,7 +26,7 @@ With this playbook, you can effortlessly set up and configure InfluxDB, ensuring
 
 ![](./assets/Ansible-Playbook-Labocbz-Deploy-Influxdb.drawio.svg)
 
-This demonstrates a potential deployment carried out using this playbook. We can observe an InfluxDB service component. This service component encompasses a subsystem, housing the two core components of our service: Apache, configured as an SSL-authenticated reverse proxy, and InfluxDB. It's often advantageous to offload security configuration to reverse proxies. In doing so, new authentication methods based on LDAP, Web Application Firewalls (WAF), Quality of Service (QoS), and more can be installed. The playbook effectively manages these scenarios.
+This demonstrates a potential deployment carried out using this playbook. We can observe an InfluxDB service component. This service component encompasses a subsystem, housing the two core components of our service Influxdb. SSL/TLS is enabled and clients can use the service.
 
 ## Tests and simulations
 
@@ -105,6 +105,10 @@ Here you can put your change to keep a trace of your work and decisions.
 * Playbook deploy Influxdb
 * Apache2 can be installed as reverse proxy SSL / Auth
 * WAF, LDAP, QOS can be handled
+
+### 2023-11-24: No more Apache2
+
+* Inlfux use HTTP/HTTP API so put an reverse proxy WAF before is not a good idea ...
 
 ## Authors
 
