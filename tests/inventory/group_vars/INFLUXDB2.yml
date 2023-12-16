@@ -1,4 +1,8 @@
 ---
+inv_prepare_host_influxdb_system_users:
+  - login: "influxdb"
+    group: "influxdb"
+
 inv_install_influxdb: true
 
 inv_install_influxdb_http_bind_address: "0.0.0.0"
@@ -29,6 +33,6 @@ inv_install_influxdb_cert_bundles:
     dest: "{{ inv_install_influxdb_ssl_path }}"
     #src_user: "myUser"
     #src_password: "secretPassword"
-    dest_user: "root"
-    dest_group: "root"
-    dest_mode: "0755"
+    dest_user: "influxdb"
+    dest_group: "influxdb"
+    dest_mode: "0700"

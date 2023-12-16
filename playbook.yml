@@ -15,6 +15,14 @@
     - name: "Install Influxdb"
       when: inv_install_influxdb | default(false)
       block:
+        - name: "Include labocbz.prepare_host"
+          tags:
+            - "labocbz.prepare_host"
+          vars:
+            prepare_host_system_users: "{{ inv_prepare_host_influxdb_system_users }}"
+          ansible.builtin.include_role:
+            name: "labocbz.prepare_host"
+
         - name: "Include labocbz.add_certificates"
           tags:
             - "labocbz.add_certificates"

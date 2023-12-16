@@ -110,6 +110,11 @@ Here you can put your change to keep a trace of your work and decisions.
 
 * Inlfux use HTTP/HTTP API so put an reverse proxy WAF before is not a good idea ...
 
+### 2023-12-16: System users
+
+* Role can now create system users and address groups
+* Added certs of 10 years
+
 ## Authors
 
 * Lord Robin Crombez
