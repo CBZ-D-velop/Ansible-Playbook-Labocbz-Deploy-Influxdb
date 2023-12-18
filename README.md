@@ -115,6 +115,12 @@ Here you can put your change to keep a trace of your work and decisions.
 * Role can now create system users and address groups
 * Added certs of 10 years
 
+### 2023-12-18: Free strategy and vars
+
+* Reorganize test
+* Disable remote use setting and free strategy
+* Rename vars for certs
+
 ## Authors
 
 * Lord Robin Crombez
