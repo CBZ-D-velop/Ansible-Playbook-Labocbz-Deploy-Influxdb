@@ -2,13 +2,9 @@
 - name: "Deploy Influxdb"
   hosts: "{{ tower_env | default([]) }}"
   gather_facts: true
-  remote_user: root
-  strategy: free
   become: true
   become_method: sudo
   become_user: root
-  tags:
-    - "labocbz.install_influxdb"
 
   tasks:
 
@@ -26,10 +22,10 @@
         - name: "Include labocbz.add_certificates"
           tags:
             - "labocbz.add_certificates"
-          loop: "{{ inv_install_influxdb_cert_bundles }}"
+          loop: "{{ inv_influxdb_cert_bundles }}"
           loop_control:
             loop_var: bundle
-          when: inv_install_influxdb_cert_bundles is defined
+          when: inv_influxdb_cert_bundles is defined
           vars:
             add_certificates_bundle_name: "{{ bundle.name }}"
             add_certificates_bundle_type: "{{ bundle.type }}"
@@ -55,3 +51,11 @@
             install_influxdb_ssl_cert: "{{ inv_install_influxdb_ssl_cert }}"
           ansible.builtin.include_role:
             name: "labocbz.install_influxdb"
+
+        - name: "Include labocbz.add_logrotate_confs"
+          tags:
+            - "labocbz.add_logrotate_confs"
+          vars:
+            logrotate_configurations: "{{ inv_logrotate_influxdb_configurations }}"
+          ansible.builtin.include_role:
+            name: "labocbz.add_logrotate_confs"

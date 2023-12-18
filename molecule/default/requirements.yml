@@ -10,3 +10,7 @@
 - name: "labocbz.install_influxdb"
   src: "https://github.com/CBZ-D-velop/Ansible-Role-Labocbz-Install-Influxdb.git"
   version: "3.0"
+
+- name: "labocbz.add_logrotate_confs"
+  src: "https://github.com/CBZ-D-velop/Ansible-Role-Labocbz-Add-Logrotate-Confs.git"
+  version: "2.2"

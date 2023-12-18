@@ -14,7 +14,7 @@ inv_install_influxdb_ssl_path: "/etc/influxdb/ssl"
 inv_install_influxdb_ssl_key: "{{ inv_install_influxdb_ssl_path }}/{{ inv_install_influxdb_ssl_domain }}/{{ inv_install_influxdb_ssl_domain }}.pem.key"
 inv_install_influxdb_ssl_cert: "{{ inv_install_influxdb_ssl_path }}/{{ inv_install_influxdb_ssl_domain }}/{{ inv_install_influxdb_ssl_domain }}.pem.crt"
 
-inv_install_influxdb_cert_bundles:
+inv_influxdb_cert_bundles:
   - name: "My-Local-Ansible-Root-CA.pem.crt"
     type: "CA"
     src: "/tmp/My-Local-Ansible-Root-CA.pem.crt"
@@ -36,3 +36,6 @@ inv_install_influxdb_cert_bundles:
     dest_user: "influxdb"
     dest_group: "influxdb"
     dest_mode: "0700"
+
+inv_logrotate_influxdb_configurations:
+  - "influxdb"
