@@ -24,7 +24,7 @@ With this playbook, you can effortlessly set up and configure InfluxDB, ensuring
 
 ## Deployment diagramm
 
-![](./assets/Ansible-Playbook-Labocbz-Deploy-Influxdb.drawio.svg)
+![Ansible-Playbook-Labocbz-Deploy-Influxdb](./assets/Ansible-Playbook-Labocbz-Deploy-Influxdb.drawio.svg)
 
 This demonstrates a potential deployment carried out using this playbook. We can observe an InfluxDB service component. This service component encompasses a subsystem, housing the two core components of our service Influxdb. SSL/TLS is enabled and clients can use the service.
 
@@ -35,7 +35,6 @@ This demonstrates a potential deployment carried out using this playbook. We can
 You have to run multiples tests. *tests with an # are mandatory*
 
 ```MARKDOWN
-# lint
 # syntax
 # converge
 # idempotence
@@ -60,7 +59,6 @@ yamllint -c ./.yamllint .
 ansible-lint --config=./.ansible-lint .
 
 # Execute and test your playbook
-molecule lint
 molecule create
 molecule list
 molecule converge
@@ -127,6 +125,14 @@ Here you can put your change to keep a trace of your work and decisions.
 * Rework global on readme
 * Rename of vars __ and refacto
 
+### 2024-05-19: New CI
+
+* Added Markdown lint to the CICD
+* Rework all Docker images
+* Change CICD vars convention
+* New workers
+* Removed all automation based on branch
+
 ## Authors
 
 * Lord Robin Crombez
@@ -136,7 +142,3 @@ Here you can put your change to keep a trace of your work and decisions.
 * [Ansible playbook documentation](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_playbooks.html)
 * [Ansible Molecule documentation](https://molecule.readthedocs.io/)
 * [labocbz.install_influxdb](https://github.com/CBZ-D-velop/Ansible-Role-Labocbz-Install-Influxdb.git)
-
-
-/etc/influxdb/ssl/clu-influxdb.net3106.databases.labo-cbz.net/clu-influxdb.net3106.databases.labo-cbz.net.pem.crt
-/etc/influxdb/ssl/clu-influxdb2.net3106.databases.labo-cbz.net/clu-influxdb2.net3106.databases.labo-cbz.net.pem.crt
